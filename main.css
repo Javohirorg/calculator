@@ -1,0 +1,78 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+transition: 0.5s;}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #091921;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.container::before{
+    content: '';
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #ffc107;
+    position: absolute;
+}
+.container:after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    background: #ffc1;
+    position: absolute;
+}
+.calculator{
+    font-size: 20px;
+    display: grid;
+    text-align: center;
+    justify-content: space-between;
+    background: #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+.value{
+    grid-column: span 4;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    text-align: right;
+    outline: none;
+    
+}
+.num{
+    border: 1px solid #fff;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color:#fff;
+    border-radius:4px ;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.num:hover{
+    background: #4cdf08;
+}
+.num.clear:hover{
+    background: #08c6df;
+}
+.num.work:hover{
+    background: #df0808;
+}
+.num.enter:hover{
+    background: #dfbf08;
+}
